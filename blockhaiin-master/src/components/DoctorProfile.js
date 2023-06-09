@@ -1,0 +1,35 @@
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// import Home from './Home';
+import React  from 'react';
+function DoctorProfile(props) {
+    // string name;
+    // address add;
+    // uint256 id;
+    // string specification;
+    // uint256 contact;
+    // string location;
+    // string password;
+    console.log(props.record);
+    return (
+      <>
+      <div>
+     
+        <h2>Profile Information:</h2>
+        <ul>
+        <li>Name:{props.record.name}</li>
+        <li>Account address:{props.record.add}</li>
+        <li>Doctor ID:{props.record.id? parseInt(props.record.id._hex, 16):'-'}</li>
+        <li>specification:{props.record.specification}</li>
+        <li>Contact:{props.record.contact? parseInt(props.record.contact._hex, 16):'-'}</li>
+        <li>Location:{props.record.location}</li>
+         
+        </ul>
+        
+      </div>
+      </>
+    );
+  }
+
+  export default DoctorProfile;
